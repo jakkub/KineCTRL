@@ -81,11 +81,11 @@ Make sure the **tilt of the sensor** is properly adjusted so the entire skeleton
 If your skeleton is being rendered in red color, you are not an active user. **Raise both hands** to gain focus and become active.
 
 
-### Gesture Manager
+## Gesture Manager
 
 Here you can manage your gestures. Click on the type of the gesture you wish to manage. All defined gestures of the selected type will appear in the list. Click on a gesture to review its definition.
 
-## Creating a New Body / Left Hand / Right Hand Gesture
+### Creating a New Body / Left Hand / Right Hand Gesture
 
 -	Select the type of the gesture you wish to create.
 -	Click the **Add New Gesture** button.
@@ -95,19 +95,19 @@ Here you can manage your gestures. Click on the type of the gesture you wish to 
 -	Now you can demonstrate your intended gesture. While demonstrating, you will see the text **RECORDING GESTURE**.
 -	When you’re done with the demonstration, you will see the text **GESTURE SAVED**. The gesture will appear in the list and you can immediately review the recording or edit your gesture.
 
-## Creating a New Posture
+### Creating a New Posture
 -	Select **Postures** from the list of gesture types.
 -	Click the **Add New Gesture** button.
 -	The Gesture Recorder will wait for you to walk into the sensor’s field of view. You should see the text **WAITING FOR USER** in the Gesture Recorder Status box.
 -	When you walk into the sensor’s field of view, the Recorder will wait for you to demonstrate your intended pose. You should see the text **PLEASE STAND STILL**. 
 -	Stand in the intended pose and wait. The posture will soon be captured and you will see the text **POSTURE SAVED**. The posture will appear in the list and you can immediately review the captured pose or edit your posture.
 
-## Editing Gestures
+### Editing Gestures
 -	To change the name of a gesture, type a new name into the text field and click the **Rename** button.
 -	To set a new definition for the gesture, click the **Redefine** button.
 -	To delete gesture, click the **Delete** button.
 
-## Setting Keyboard Actions
+### Setting Keyboard Actions
 -	Keyboard action, which will be executed when you perform the gesture, is shown in the Gesture Info box, right next to the **Action** label.
 -	To set a keyboard action, click on the bold text. This text will read either **Undefined** or the already assigned key will be shown. Once you click on the bold text, it will immediately change to **press a key…**
 -	Press the intended key on your keyboard. You can also press a combination of keys using **Ctrl**, **Shift**, **Alt** or **Win** keys.
@@ -163,7 +163,8 @@ To start the Debug Mode, click the **Show Debugging Window** button.
 
 Check **Execute Key Presses** to send the keyboard events into the operating system when a gesture is recognized.
 
-Check **Multiply Key Presses** to send each keyboard event multiple times. This is useful in DirectX games, for more information see section Known Issues.
+Check **Multiply Key Presses** to send each keyboard event multiple times. This is useful in DirectX games, for more information see section [Known Issues](#known-issues).
+
 
 
 ## Debug Mode
@@ -174,3 +175,61 @@ On the right side you can compare the last performed gesture with the result of 
 In order to view this information, the gesture recognition has to be activated.
 
 ![Debug Mode](/images/debugmode.png)
+
+
+
+## Using Voice Commands
+
+You can easily control the KineCTRL application using voice commands. First, make sure the Voice Recognition is on. Now you can just say the word or phrase to execute desired action.
+
+Action | Voice Commands
+------ | --------------
+Enable Gesture Recognition | start, start recognition, start recognizer, start gesture recognizer, start gesture recognition, activate recognizer, recognizer on, recognition on
+
+Disable Gesture Recognition | stop, stop recognition, stop recognizer, stop gesture recognizer, stop gesture recognition, deactivate recognizer, recognizer off, recognition off
+
+Enable HandMouse function | start hand mouse, hand mouse on, activate hand mouse, start mouse, mouse on, activate mouse
+
+Disable HandMouse function | stop hand mouse, hand mouse off, deactivate hand mouse, stop mouse, mouse off, deactivate mouse
+
+Switch HandMouse control to Left Hand | left hand mouse, left mouse
+
+Switch HandMouse control to Right Hand | right hand mouse, right mouse
+
+Left Mouse Button Click | click, left click
+
+Right Mouse Button Click | right click
+
+Tilt Sensor Up | tilt up
+
+Tilt Sensor Down | tilt down
+
+Add New Gesture | new gesture, add gesture, add new gesture, add new, create new, create gesture
+
+Redefine Gesture | redefine, redefine gesture, new definition
+
+Show Gesture Recognizer Tab | switch to gesture recognizer, switch to recognizer, show gesture recognizer, show recognizer
+
+Show Gesture Manager Tab | switch to gesture manager, switch to manager, show gesture manager, show manager
+
+Show Body Gestures | switch to body gestures, show body gestures
+
+Show Left Hand Gestures | switch to left hand gestures, show left hand gestures
+
+Show Right Hand Gestures | switch to right hand gestures, show right hand gestures
+
+Show Postures | switch to postures, show postures
+
+Execute Key Presses | start keys, activate keys, keys on
+
+Do Not Execute Key Presses | stop keys, deactivate keys, keys off
+
+Multiply Key Presses | start game, activate game, game on
+
+Do Not Multiply Key Presses | stop game, deactivate game, game off
+
+
+## Using HandMouse Function
+With the HandMouse function activated, you can control the mouse cursor by moving your hand in the direction the cursor should be shifted. 
+
+Emulate click of the **left mouse button** by saying *click* or *left click*. Emulate click of the **right mouse button** by saying *right click*.
