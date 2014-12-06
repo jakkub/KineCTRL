@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KineCTRL>
+  <Gestures Type="BODY" />
+  <Gestures Type="LEFT_HAND" />
+  <Gestures Type="RIGHT_HAND" />
+  <Gestures Type="POSTURE">
+    <Gesture Name="Default" Type="POSTURE_DEFAULT">
+      <Frames>
+        <Frame>AAEAAAD/////AQAAAAAAAAAMAgAAAFNNaWNyb3NvZnQuS2luZWN0LCBWZXJzaW9uPTEuOC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MzFiZjM4NTZhZDM2NGUzNQUBAAAAGU1pY3Jvc29mdC5LaW5lY3QuU2tlbGV0b24FAAAAHjxUcmFja2luZ1N0YXRlPmtfX0JhY2tpbmdGaWVsZBs8VHJhY2tpbmdJZD5rX19CYWNraW5nRmllbGQZPFBvc2l0aW9uPmtfX0JhY2tpbmdGaWVsZBc8Sm9pbnRzPmtfX0JhY2tpbmdGaWVsZB08Q2xpcHBlZEVkZ2VzPmtfX0JhY2tpbmdGaWVsZAQABAQEJk1pY3Jvc29mdC5LaW5lY3QuU2tlbGV0b25UcmFja2luZ1N0YXRlAgAAAAgeTWljcm9zb2Z0LktpbmVjdC5Ta2VsZXRvblBvaW50AgAAACBNaWNyb3NvZnQuS2luZWN0LkpvaW50Q29sbGVjdGlvbgIAAAAbTWljcm9zb2Z0LktpbmVjdC5GcmFtZUVkZ2VzAgAAAAIAAAAF/f///yZNaWNyb3NvZnQuS2luZWN0LlNrZWxldG9uVHJhY2tpbmdTdGF0ZQEAAAAHdmFsdWVfXwAIAgAAAAIAAACZAAAABfz///8eTWljcm9zb2Z0LktpbmVjdC5Ta2VsZXRvblBvaW50AwAAABI8WD5rX19CYWNraW5nRmllbGQSPFk+a19fQmFja2luZ0ZpZWxkEjxaPmtfX0JhY2tpbmdGaWVsZAAAAAsLCwIAAAAdVqg9WDXqPfIfFEAJBQAAAAX6////G01pY3Jvc29mdC5LaW5lY3QuRnJhbWVFZGdlcwEAAAAHdmFsdWVfXwAIAgAAAAAAAAAFBQAAACBNaWNyb3NvZnQuS2luZWN0LkpvaW50Q29sbGVjdGlvbgEAAAANX3NrZWxldG9uRGF0YQQYTWljcm9zb2Z0LktpbmVjdC5Kb2ludFtdAgAAAAIAAAAJBwAAAAcHAAAAAAEAAAAUAAAABBZNaWNyb3NvZnQuS2luZWN0LkpvaW50AgAAAAX4////Fk1pY3Jvc29mdC5LaW5lY3QuSm9pbnQDAAAAGTxQb3NpdGlvbj5rX19CYWNraW5nRmllbGQaPEpvaW50VHlwZT5rX19CYWNraW5nRmllbGQePFRyYWNraW5nU3RhdGU+a19fQmFja2luZ0ZpZWxkBAQEHk1pY3Jvc29mdC5LaW5lY3QuU2tlbGV0b25Qb2ludAIAAAAaTWljcm9zb2Z0LktpbmVjdC5Kb2ludFR5cGUCAAAAI01pY3Jvc29mdC5LaW5lY3QuSm9pbnRUcmFja2luZ1N0YXRlAgAAAAIAAAAB9/////z////UCMA9o7eWPkfpFkAF9v///xpNaWNyb3NvZnQuS2luZWN0LkpvaW50VHlwZQEAAAAHdmFsdWVfXwAIAgAAAAAAAAAF9f///yNNaWNyb3NvZnQuS2luZWN0LkpvaW50VHJhY2tpbmdTdGF0ZQEAAAAHdmFsdWVfXwAIAgAAAAIAAAAB9P////j///8B8/////z////u6b09e6G6PldtFkAB8v////b///8BAAAAAfH////1////AgAAAAHw////+P///wHv/////P///6JzuD35ITk/0fsUQAHu////9v///wIAAAAB7f////X///8CAAAAAez////4////Aev////8////XeSrPZrXZj/W1w9AAer////2////AwAAAAHp////9f///wIAAAAB6P////j///8B5/////z///+kD8a9H/0hP9l2FkAB5v////b///8EAAAAAeX////1////AgAAAAHk////+P///wHj/////P///1BwLL4LhLA+tswYQAHi////9v///wUAAAAB4f////X///8CAAAAAeD////4////Ad/////8////FPs2vigz3T0sFxhAAd7////2////BgAAAAHd////9f///wIAAAAB3P////j///8B2/////z////CVDS+b1RcPD8yGEAB2v////b///8HAAAAAdn////1////AgAAAAHY////+P///wHX/////P///3hvhj75jSM/2XIWQAHW////9v///wgAAAAB1f////X///8CAAAAAdT////4////AdP////8////CtqyPlDMrD42oRdAAdL////2////CQAAAAHR////9f///wIAAAAB0P////j///8Bz/////z///8lL8k+agXcPRP+FkABzv////b///8KAAAAAc3////1////AgAAAAHM////+P///wHL/////P///7ww1D6eQSU8WmMWQAHK////9v///wsAAAAByf////X///8CAAAAAcj////4////Acf////8////PrNuPGVhWD667RZAAcb////2////DAAAAAHF////9f///wIAAAABxP////j///8Bw/////z///+RhAy8nRiyvtaBHUABwv////b///8NAAAAAcH////1////AgAAAAHA////+P///wG//////P///4X7Db1OnTq/fkEhQAG+////9v///w4AAAABvf////X///8CAAAAAbz////4////Abv////8////QBC1vfefSb/CXB9AAbr////2////DwAAAAG5////9f///wIAAAABuP////j///8Bt/////z///8c4DI+AQRdPvU2F0ABtv////b///8QAAAAAbX////1////AgAAAAG0////+P///wGz/////P///9jXYT7x7Km+t8AcQAGy////9v///xEAAAABsf////X///8CAAAAAbD////4////Aa/////8////SJlwPmDvM78SCiFAAa7////2////EgAAAAGt////9f///wIAAAABrP////j///8Bq/////z///9uvJc+BrxDvxflH0ABqv////b///8TAAAAAan////1////AgAAAAs=</Frame>
+      </Frames>
+      <Action />
+    </Gesture>
+  </Gestures>
+  <Settings>
+    <Setting Key="BodyRecognizerDetection">1,3</Setting>
+    <Setting Key="BodyRecognizerConfidence">1</Setting>
+    <Setting Key="HandRecognizerDetection">1,3</Setting>
+    <Setting Key="HandRecognizerConfidence">1</Setting>
+    <Setting Key="PostureRecognizerDefinition">0,2</Setting>
+    <Setting Key="PostureRecognizerConfidence">0,2</Setting>
+    <Setting Key="RecorderDetection">1,3</Setting>
+    <Setting Key="RecorderReady">6</Setting>
+    <Setting Key="HandMouseSensitivity">1</Setting>
+    <Setting Key="SpeechRecognizerConfidence">0,3</Setting>
+    <Setting Key="KeyPressMultiplier">false</Setting>
+    <Setting Key="ExecuteKeyPresses">true</Setting>
+  </Settings>
+</KineCTRL>

@@ -1,0 +1,15 @@
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\bin\Release\KineCTRL.exe.config
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\bin\Release\KineCTRL.exe
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\bin\Release\KineCTRL.pdb
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\DebugWindow.baml
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\MainWindow.baml
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\DebugWindow.g.cs
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\MainWindow.g.cs
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\App.g.cs
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL_MarkupCompile.cache
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL.g.resources
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL.Properties.Resources.resources
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL.csproj.GenerateResource.Cache
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL.exe
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL.pdb
+E:\Kinect\KineCTRL\KineCTRL\KineCTRL\obj\x86\Release\KineCTRL.csprojResolveAssemblyReference.cache
