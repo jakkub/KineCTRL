@@ -181,7 +181,7 @@ On the right side you can compare the last performed gesture with the result of 
 
 In order to view this information, the gesture recognition has to be activated.
 
-![Debug Mode](/images/debugmode.png)
+![Debug Mode](/docs/images/debugmode.png)
 
 
 
