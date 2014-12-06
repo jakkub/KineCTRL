@@ -1,0 +1,190 @@
+﻿<grammar version="1.0" xml:lang="en-US" root="rootRule" tag-format="semantics/1.0-literals" xmlns="http://www.w3.org/2001/06/grammar">
+  <rule id="rootRule">
+    <one-of>
+      <item>
+        <tag>GESTURE_RECOGNITION_ON</tag>
+        <one-of>
+          <item> start </item>
+          <item> start recognition </item>
+          <item> start recognizer </item>
+          <item> start gesture recognizer </item>
+          <item> start gesture recognition </item>
+          <item> activate recognizer </item>
+          <item> recognizer on </item>
+          <item> recognition on </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>GESTURE_RECOGNITION_OFF</tag>
+        <one-of>
+          <item> stop </item>
+          <item> stop recognition </item>
+          <item> stop recognizer </item>
+          <item> stop gesture recognizer </item>
+          <item> stop gesture recognition </item>
+          <item> deactivate recognizer </item>
+          <item> recognizer off </item>
+          <item> recognition off </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>HANDMOUSE_ON</tag>
+        <one-of>
+          <item> start hand mouse </item>
+          <item> hand mouse on </item>
+          <item> activate hand mouse </item>
+          <item> start mouse </item>
+          <item> mouse on </item>
+          <item> activate mouse </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>HANDMOUSE_OFF</tag>
+        <one-of>
+          <item> stop hand mouse </item>
+          <item> hand mouse off </item>
+          <item> deactivate hand mouse </item>
+          <item> stop mouse </item>
+          <item> mouse off </item>
+          <item> deactivate mouse </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>HANDMOUSE_LEFT</tag>
+        <one-of>
+          <item> left hand mouse </item>
+          <item> left mouse </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>HANDMOUSE_RIGHT</tag>
+        <one-of>
+          <item> right hand mouse </item>
+          <item> right mouse </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>CLICK_LEFT</tag>
+        <one-of>
+          <item> click </item>
+          <item> left click </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>CLICK_RIGHT</tag>
+        <one-of>
+          <item> right click </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>TILT_UP</tag>
+        <one-of>
+          <item> tilt up </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>TILT_DOWN</tag>
+        <one-of>
+          <item> tilt down </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>NEW_GESTURE</tag>
+        <one-of>
+          <item> new gesture </item>
+          <item> add gesture </item>
+          <item> add new gesture </item>
+          <item> add new </item>
+          <item> create new </item>
+          <item> create gesture </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>REDEFINE_GESTURE</tag>
+        <one-of>
+          <item> redefine </item>
+          <item> redefine gesture </item>
+          <item> new definition </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>TAB_GESTURE_RECOGNIZER</tag>
+        <one-of>
+          <item> switch to gesture recognizer </item>
+          <item> switch to recognizer </item>
+          <item> show gesture recognizer </item>
+          <item> show recognizer </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>TAB_GESTURE_MANAGER</tag>
+        <one-of>
+          <item> switch to gesture manager </item>
+          <item> switch to manager </item>
+          <item> show gesture manager </item>
+          <item> show manager </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>RADIO_BODY_GESTURES</tag>
+        <one-of>
+          <item> switch to body gestures </item>
+          <item> show body gestures </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>RADIO_LEFT_HAND_GESTURES</tag>
+        <one-of>
+          <item> switch to left hand gestures </item>
+          <item> show left hand gestures </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>RADIO_RIGHT_HAND_GESTURES</tag>
+        <one-of>
+          <item> switch to right hand gestures </item>
+          <item> show right hand gestures </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>RADIO_POSTURES</tag>
+        <one-of>
+          <item> switch to postures </item>
+          <item> show postures </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>KEY_PRESSES_ON</tag>
+        <one-of>
+          <item> start keys </item>
+          <item> activate keys </item>
+          <item> keys on </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>KEY_PRESSES_OFF</tag>
+        <one-of>
+          <item> stop keys </item>
+          <item> deactivate keys </item>
+          <item> keys off </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>DIRECTX_ON</tag>
+        <one-of>
+          <item> start game </item>
+          <item> activate game </item>
+          <item> game on </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>DIRECTX_OFF</tag>
+        <one-of>
+          <item> stop game </item>
+          <item> deactivate game </item>
+          <item> game off </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

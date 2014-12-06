@@ -1,0 +1,213 @@
+﻿<Window x:Class="KineCTRL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="KineCTRL" Height="836" Width="1092" Loaded="Window_Loaded" Closing="Window_Closing" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" Name="Main" Initialized="Main_Initialized" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Image" x:Key="ImageHover">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.8" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Background="Transparent">
+        
+        <Grid x:Name="GridMain">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Margin="219,3,0,5" SelectionChanged="TabControl_SelectionChanged" Width="843" Height="780">
+            <TabItem Header="Gesture Recognizer" Name="TabItemGestureRecognizer">
+                <Grid Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="304" />
+                        <ColumnDefinition Width="704" />
+                    </Grid.ColumnDefinitions>
+                    <Image Height="600" HorizontalAlignment="Left" Name="ImageOutputMain" Stretch="Fill" VerticalAlignment="Top" Width="800" Margin="16,6,0,0" Grid.ColumnSpan="2" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="399,6,0,0" Name="comboBoxOutputStream" VerticalAlignment="Top" Width="113" SelectedIndex="0" SelectionChanged="ComboBoxOutputStream_SelectionChanged" Grid.Column="1" Visibility="Hidden">
+                        <ComboBoxItem Content="Skeleton Stream" />
+                        <ComboBoxItem Content="Color Stream" />
+                        <ComboBoxItem Content="Depth Stream" />
+                    </ComboBox>
+                    <GroupBox Header="Body Recognizer Result" HorizontalAlignment="Left" Margin="282,612,0,0" VerticalAlignment="Top" Height="61" Width="268" Grid.ColumnSpan="2">
+                        <Label Content="" FontSize="34" FontStretch="Normal" Foreground="#FF1F1F1F" Height="48" HorizontalAlignment="Left" Margin="0,-6,-2,-3" x:Name="LblBodyRecognizerResult" VerticalAlignment="Top" Width="258" HorizontalContentAlignment="Center" Padding="5,0" Background="{x:Null}" FontWeight="Bold" OpacityMask="White" />
+                    </GroupBox>
+                    <GroupBox Header="Left Hand Recognizer Result" HorizontalAlignment="Left" Margin="10,612,0,0" VerticalAlignment="Top" Height="61" Width="267">
+                        <Label Content="" FontSize="34" FontStretch="Normal" Foreground="#FF1F1F1F" Height="48" HorizontalAlignment="Left" Margin="0,-6,-2,-3" x:Name="LblLHRecognizerResult" VerticalAlignment="Top" Width="257" HorizontalContentAlignment="Center" Padding="5,0" Background="{x:Null}" FontWeight="Bold" />
+                    </GroupBox>
+                    <GroupBox Header="Right Hand Recognizer Result" HorizontalAlignment="Left" Margin="251,612,0,0" VerticalAlignment="Top" Height="61" Width="268" Grid.Column="1">
+                        <Label Content="" FontSize="34" FontStretch="Normal" Foreground="#FF1F1F1F" Height="48" HorizontalAlignment="Left" Margin="0,-6,0,-3" x:Name="LblRHRecognizerResult" VerticalAlignment="Top" Width="247" HorizontalContentAlignment="Center" Padding="5,0" Background="{x:Null}" FontWeight="Bold" />
+                    </GroupBox>
+                    <GroupBox Header="Posture Recognizer Result" HorizontalAlignment="Left" Margin="10,683,0,0" VerticalAlignment="Top" Height="61" Width="813" Grid.ColumnSpan="2">
+                        <Label Content="" FontSize="34" FontStretch="Normal" Foreground="#FF1F1F1F" Height="48" HorizontalAlignment="Left" Margin="0,-6,-2,-3" x:Name="LblPostureRecognizerResult" VerticalAlignment="Top" Width="803" HorizontalContentAlignment="Center" Padding="5,0" Background="{x:Null}" FontWeight="Bold" />
+                    </GroupBox>
+                    <TextBlock x:Name="TbTipBecomeActive" Grid.Column="1" HorizontalAlignment="Left" Margin="193,574,0,0" TextWrapping="Wrap" Text="Tip: Raise both hands to become active" VerticalAlignment="Top" FontSize="18" Foreground="#FF54C104" Visibility="Hidden"/>
+                </Grid>
+            </TabItem>
+            
+            <TabItem Header="Gesture Manager" IsSelected="False" Name="TabItemGestureManager">
+                <Grid Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="275*"/>
+                        <ColumnDefinition Width="747*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox Name="LboxGestures" Margin="12,105,52,161" SelectionChanged="LboxGestures_SelectionChanged" />
+                    <Image Height="480" HorizontalAlignment="Left" Margin="183,105,0,0" Name="ImageOutputManager" Stretch="Fill" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2" />
+                    <Button Content="Add New Gesture" Height="35" Margin="0,601,52,0" Name="BtnNewGesture" VerticalAlignment="Top" Width="160" HorizontalAlignment="Right" Click="BtnNewGesture_Click" FontSize="14" />
+                    <RadioButton Content="Body Gestures" Height="16" HorizontalAlignment="Left" Margin="12,11,0,0" Name="RbBodyGestures" VerticalAlignment="Top" Checked="RbBodyGestures_Checked" />
+                    <RadioButton Content="Left Hand Gestures" Height="16" HorizontalAlignment="Left" Margin="12,33,0,0" Name="RbLHGestures" VerticalAlignment="Top" Checked="RbLHGestures_Checked" />
+                    <RadioButton Content="Right Hand Gestures" Height="16" HorizontalAlignment="Left" Margin="12,55,0,0" Name="RbRHGestures" VerticalAlignment="Top" Checked="RbRHGestures_Checked" />
+                    <RadioButton Content="Postures" Height="16" HorizontalAlignment="Left" Margin="12,76,0,0" x:Name="RbPostures" VerticalAlignment="Top" Checked="RbPostures_Checked" />
+                    <GroupBox Header="Gesture Recorder Status" HorizontalAlignment="Left" Margin="183,16,0,0" VerticalAlignment="Top" Height="66" Width="640" Grid.ColumnSpan="2">
+                        <Grid>
+                        <Label Content="STAND BY" FontSize="36" FontStretch="Normal" Foreground="#FF383085" Height="48" HorizontalAlignment="Left" Margin="10,-4,0,0" x:Name="LblRecorderStatus" VerticalAlignment="Top" Width="608" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" Padding="5,0" Background="{x:Null}" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="GboxGestureInfo" Header="Gesture Info" HorizontalAlignment="Left" Margin="183,601,0,0" VerticalAlignment="Top" Height="138" Width="324" Grid.ColumnSpan="2">
+                        <Grid>
+                            <TextBlock Cursor="Hand" Focusable="True" FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="55,50,0,0" x:Name="TbSetAction" Text="Undefined" VerticalAlignment="Top" MouseLeftButtonDown="TbSetAction_MouseLeftButtonDown" FontSize="14" MouseRightButtonDown="TbSetAction_MouseRightButtonDown" />
+                            <Label Content="Action:" Height="28" HorizontalAlignment="Left" Margin="2,45,0,0" x:Name="LblGestureAction" VerticalAlignment="Top" FontSize="14" />
+                            <Label Content="Name:" Height="28" HorizontalAlignment="Left" Margin="4,9,0,0" x:Name="LblGestureName" VerticalAlignment="Top" FontSize="14" />
+                            <TextBox Height="28" HorizontalAlignment="Left" Margin="55,10,0,0" x:Name="TboxGestureName" VerticalAlignment="Top" Width="160" FontSize="14" />
+                            <Button Content="Rename" Height="28" HorizontalAlignment="Left" Margin="220,10,-1,0" x:Name="BtnSaveGestureName" VerticalAlignment="Top" Width="86" Click="BtnSaveGestureName_Click" FontSize="14" />
+                            <Button Content="Delete" Height="28" HorizontalAlignment="Left" Margin="153,81,0,0" x:Name="BtnDeleteGesture" VerticalAlignment="Top" Width="86" DataContext="{Binding}" Click="BtnDeleteGesture_Click" FontSize="14" />
+                            <Button x:Name="BtnRedefineGesture" Content="Redefine" HorizontalAlignment="Left" Margin="62,81,0,0" VerticalAlignment="Top" Width="86" Click="BtnRedefineGesture_Click" FontSize="14" RenderTransformOrigin="3.779,-1.16" Height="28"/>
+
+
+                        </Grid>
+                    </GroupBox>
+                    <TextBlock x:Name="TbDefaultPostureInfo" Grid.Column="1" HorizontalAlignment="Left" Margin="31,650,0,0" TextWrapping="Wrap" Text="This is your default posture. " VerticalAlignment="Top" FontSize="14" Height="24" Width="178"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemAdvancedSettings" Header="Advanced Settings">
+                <Grid>
+                        <Button x:Name="BtnResetSettingsToDefault" Content="Reset to Default" Margin="681,705,10,10" Click="BtnResetSettingsToDefault_Click" FontSize="14" Width="142" Height="33"/>
+                        <GroupBox Header="Body Recognizer Settings" HorizontalAlignment="Left" Margin="36,31,0,0" VerticalAlignment="Top" Height="179" Width="364">
+                            <Grid>
+                                <Slider x:Name="SldrBodyRecognizerDetection" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="336" Value="3" Maximum="4" Minimum="0.5" ValueChanged="SldrBodyRecognizerDetection_ValueChanged" TickPlacement="BottomRight" TickFrequency="0.1" LargeChange="0.3" IsSnapToTickEnabled="True"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Detection Sensitivity" VerticalAlignment="Top" FontSize="14"/>
+                                <Slider x:Name="SldrBodyRecognizerConfidence" HorizontalAlignment="Left" Margin="10,111,-8,0" VerticalAlignment="Top" Width="336" Minimum="0.1" Maximum="2" Value="0.5" TickFrequency="0.1" TickPlacement="BottomRight" ValueChanged="SldrBodyRecognizerConfidence_ValueChanged" LargeChange="0.3" IsSnapToTickEnabled="True"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Confidence Threshold" VerticalAlignment="Top" FontSize="14"/>
+                                <TextBlock x:Name="TbBodyRecognizerDetectionValue" HorizontalAlignment="Left" Margin="169,57,0,0" TextWrapping="Wrap" Text="{Binding ElementName=SldrBodyRecognizerDetection, Path=Value}" VerticalAlignment="Top"/>
+                                <TextBlock x:Name="TbBodyRecognizerConfidenceValue" HorizontalAlignment="Left" Margin="169,133,0,0" TextWrapping="Wrap" Text="{Binding ElementName=SldrBodyRecognizerConfidence, Path=Value}" VerticalAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Left &amp; Right Hand Recognizer Settings" HorizontalAlignment="Left" Margin="438,31,0,0" VerticalAlignment="Top" Height="179" Width="364">
+                            <Grid>
+                                <Slider x:Name="SldrHandRecognizerDetection" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="336" Value="1.3" Maximum="4" Minimum="0.5" TickPlacement="BottomRight" TickFrequency="0.1" ValueChanged="SldrHandRecognizerDetection_ValueChanged" LargeChange="0.3" IsSnapToTickEnabled="True"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Detection Sensitivity" VerticalAlignment="Top" FontSize="14"/>
+                                <Slider x:Name="SldrHandRecognizerConfidence" HorizontalAlignment="Left" Margin="10,111,-8,0" VerticalAlignment="Top" Width="336" Minimum="0.1" Maximum="2" Value="1" TickFrequency="0.1" TickPlacement="BottomRight" ValueChanged="SldrHandRecognizerConfidence_ValueChanged" LargeChange="0.3" IsSnapToTickEnabled="True"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Confidence Threshold" VerticalAlignment="Top" FontSize="14"/>
+                                <TextBlock x:Name="TbHandRecognizerDetectionValue" HorizontalAlignment="Left" Margin="169,57,0,0" TextWrapping="Wrap" Text="{Binding ElementName=SldrHandRecognizerDetection, Path=Value}" VerticalAlignment="Top"/>
+                                <TextBlock x:Name="TbHandRecognizerConfidenceValue" HorizontalAlignment="Left" Margin="169,133,0,0" TextWrapping="Wrap" Text="{Binding ElementName=SldrHandRecognizerConfidence, Path=Value}" VerticalAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Posture Recognizer Settings" HorizontalAlignment="Left" Margin="36,244,0,0" VerticalAlignment="Top" Height="179" Width="364">
+                            <Grid>
+                                <Slider x:Name="SldrPostureRecognizerDefinition" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="336" Value="0.2" Maximum="0.5" Minimum="0.05" TickPlacement="BottomRight" TickFrequency="0.01" LargeChange="0.1" IsSnapToTickEnabled="True" SmallChange="0.01" ValueChanged="SldrPostureRecognizerDefinition_ValueChanged"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Definition Tolerance" VerticalAlignment="Top" FontSize="14"/>
+                                <Slider x:Name="SldrPostureRecognizerConfidence" HorizontalAlignment="Left" Margin="10,111,-8,0" VerticalAlignment="Top" Width="336" Minimum="0.05" Maximum="0.5" Value="0.2" TickFrequency="0.01" TickPlacement="BottomRight" LargeChange="0.1" IsSnapToTickEnabled="True" SmallChange="0.01" ValueChanged="SldrPostureRecognizerConfidence_ValueChanged"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Confidence Threshold" VerticalAlignment="Top" FontSize="14"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="169,57,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=SldrPostureRecognizerDefinition}" VerticalAlignment="Top"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="169,133,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=SldrPostureRecognizerConfidence}" VerticalAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="HandMouse Recognizer Settings" HorizontalAlignment="Left" Margin="438,449,0,0" VerticalAlignment="Top" Height="107" Width="364">
+                            <Grid>
+                                <Slider x:Name="SldrHandMouseSensitivity" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="336" Value="1" Maximum="3" Minimum="0.5" TickPlacement="BottomRight" TickFrequency="0.1" LargeChange="0.3" IsSnapToTickEnabled="True" ValueChanged="SldrHandMouseSensitivity_ValueChanged"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Sensitivity" VerticalAlignment="Top" FontSize="14"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="169,57,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=SldrHandMouseSensitivity}" VerticalAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Speech Recognizer Settings" HorizontalAlignment="Left" Margin="36,449,0,0" VerticalAlignment="Top" Height="107" Width="364">
+                            <Grid>
+                                <Slider x:Name="SldrSpeechRecognizerConfidence" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="336" Value="0.3" Maximum="1" Minimum="0.1" TickPlacement="BottomRight" TickFrequency="0.1" LargeChange="0.3" IsSnapToTickEnabled="True" ValueChanged="SldrSpeechRecognizerConfidence_ValueChanged"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Confidence Threshold" VerticalAlignment="Top" FontSize="14"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="169,57,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=SldrSpeechRecognizerConfidence
+                                    }" VerticalAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Gesture Recorder Settings" HorizontalAlignment="Left" Margin="438,244,0,0" VerticalAlignment="Top" Height="179" Width="364">
+                            <Grid>
+                                <Slider x:Name="SldrRecorderDetection" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="336" Value="1.3" Maximum="4" Minimum="0.5" TickPlacement="BottomRight" TickFrequency="0.1" LargeChange="0.3" IsSnapToTickEnabled="True" ValueChanged="SldrRecorderDetection_ValueChanged"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,11,0,0" TextWrapping="Wrap" Text="Detection Sensitivity" VerticalAlignment="Top" FontSize="14"/>
+                                <Slider x:Name="SldrRecorderReady" HorizontalAlignment="Left" Margin="10,111,-8,0" VerticalAlignment="Top" Width="336" Minimum="3" Maximum="8" Value="5" TickFrequency="0.2" TickPlacement="BottomRight" LargeChange="0.5" IsSnapToTickEnabled="True" SmallChange="0.2" ValueChanged="SldrRecorderReady_ValueChanged"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Recorder Ready Threshold" VerticalAlignment="Top" FontSize="14"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="169,57,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=SldrRecorderDetection}" VerticalAlignment="Top"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="169,132,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=SldrRecorderReady}" VerticalAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Debugging" HorizontalAlignment="Left" Margin="36,589,0,0" VerticalAlignment="Top" Height="133" Width="364">
+                            <Grid>
+                                <Button x:Name="BtnShowDebugWindow" Content="Show Debugging Window" Margin="79,12,75,65" FontSize="14" Click="BtnShowDebugWindow_Click"/>
+                                <CheckBox x:Name="CbDirectXmode" Content="Multiply Key Presses" HorizontalAlignment="Left" Margin="79,81,0,0" VerticalAlignment="Top" Checked="CbDirectXmode_Checked" Unchecked="CbDirectXmode_Unchecked"/>
+                                <CheckBox x:Name="CbExecuteKeyPresses" Content="Execute Key Presses" HorizontalAlignment="Left" Margin="79,60,0,0" VerticalAlignment="Top" Checked="CbExecuteKeyPresses_Checked" Unchecked="CbExecuteKeyPresses_Unchecked"/>
+                            </Grid>
+                        </GroupBox>
+
+                    </Grid>
+            </TabItem>
+                
+            </TabControl>
+        <GroupBox Header="Profiles" HorizontalAlignment="Left" Margin="10,453,0,0" VerticalAlignment="Top" Height="336" Width="206">
+            <Grid>
+                <ListBox x:Name="LboxProfiles" Margin="5,76,2,33" MouseDoubleClick="LboxProfiles_MouseDoubleClick" SelectionChanged="LboxProfiles_SelectionChanged" />
+                <Button x:Name="BtnLoadProfile" Content="Load" HorizontalAlignment="Left" Margin="5,49,0,0" VerticalAlignment="Top" Width="43                             " Click="BtnLoadProfile_Click"/>
+                <Button x:Name="BtnNewProfile" Content="New" HorizontalAlignment="Left" Margin="53,49,0,0" VerticalAlignment="Top" Width="43                             " Click="BtnNewProfile_Click"/>
+                <Button x:Name="BtnCopyProfile" Content="Copy" HorizontalAlignment="Left" Margin="101,49,0,0" VerticalAlignment="Top" Width="43" Click="BtnCopyProfile_Click"/>
+                <Button x:Name="BtnDeleteProfile" Content="Delete" HorizontalAlignment="Left" Margin="149,49,0,0" VerticalAlignment="Top" Width="43" Click="BtnDeleteProfile_Click" RenderTransformOrigin="0.349,3.5"/>
+                <TextBox x:Name="TboxRenameProfile" HorizontalAlignment="Left" Height="23" Margin="5,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+                <Button x:Name="BtnRenameProfile" Content="Rename" HorizontalAlignment="Left" Margin="139,286,0,0" VerticalAlignment="Top" Width="53" Click="BtnRenameProfile_Click" RenderTransformOrigin="0.528,2.045"/>
+                    <TextBlock x:Name="TbCurrentProfile" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#F7383085" Width="174" TextAlignment="Center" Height="25" FontSize="18"/>
+
+                </Grid>
+        </GroupBox>
+            <Image x:Name="ImgLogo" HorizontalAlignment="Left" Height="62" Margin="18,11,0,0" VerticalAlignment="Top" Width="190" Source="Images/simple_cyan.png" MouseLeftButtonUp="ImgLogo_MouseLeftButtonUp"/>
+            <Label Content="Label" HorizontalAlignment="Right" Margin="0,336,1211,0" x:Name="LblSkeletonStreamFPS" Height="25" VerticalAlignment="Top" />
+        <Label Content="Label" Height="28" HorizontalAlignment="Right" Margin="0,377,1211,0" x:Name="LblDepthStreamFPS" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left" Margin="19,357,0,448" x:Name="LblColorStreamFPS" />
+            <GroupBox Header="Tilt Control" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top" Height="103" Width="206">
+                <Grid HorizontalAlignment="Right" Height="82" VerticalAlignment="Top" Width="186" Margin="0,0,-2,-1">
+                    <Label Content="Tilt" Height="46" HorizontalAlignment="Left" Margin="88,22,0,0" x:Name="LblTilt" VerticalAlignment="Top" RenderTransformOrigin="-2.692,-3.357" Foreground="#FF54C104" FontSize="22" Width="52" />
+                    <Image x:Name="ImgTiltUp" HorizontalAlignment="Left" Height="32" Margin="52,7,0,0" VerticalAlignment="Top" Width="32" Source="Images/tilt_up.png" ToolTip="Tilt Sensor Up" Style="{StaticResource ImageHover}" MouseLeftButtonDown="ImgTiltUp_MouseLeftButtonDown" Cursor="Hand"/>
+                    <Image x:Name="ImgTiltDown" HorizontalAlignment="Left" Height="32" Margin="52,44,0,0" VerticalAlignment="Top" Width="32" Source="Images/tilt_down.png" ToolTip="Tilt Sensor Down" Style="{StaticResource ImageHover}" MouseLeftButtonDown="ImgTiltDown_MouseLeftButtonDown" Cursor="Hand"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="HandMouse Mode" HorizontalAlignment="Left" Margin="10,263,0,0" VerticalAlignment="Top" Height="71" Width="206">
+                <Grid HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="196" Margin="0,0,-2,0">
+                    <Image x:Name="ImgHandMouseModeLeft" HorizontalAlignment="Left" Height="32" Margin="62,10,0,0" VerticalAlignment="Top" Width="32" Source="Images/handmouse_left_off.png" ToolTip="Left Handed Mouse Control" Style="{StaticResource ImageHover}" MouseLeftButtonUp="ImgHandMouseModeLeft_MouseLeftButtonUp" Cursor="Hand"/>
+                    <Image x:Name="ImgHandMouseModeRight" HorizontalAlignment="Left" Height="32" Margin="99,10,0,0" VerticalAlignment="Top" Width="32" Source="Images/handmouse_right_off.png" ToolTip="Right Handed Mouse Control" Style="{StaticResource ImageHover}" MouseLeftButtonUp="ImgHandMouseModeRight_MouseLeftButtonUp" Cursor="Hand"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Recognizers" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="83" Width="206">
+                <Grid HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="194">
+                    <Image x:Name="ImgRecognitionStatus" HorizontalAlignment="Left" Height="48" Margin="20,7,0,0" VerticalAlignment="Top" Width="48" Source="Images/recognition_off.png" ToolTip="" MouseLeftButtonUp="ImgRecognitionStatus_MouseLeftButtonUp" Cursor="Hand" Style="{StaticResource ImageHover}"/>
+                    <Image x:Name="ImgSpeechStatus" HorizontalAlignment="Left" Height="48" Margin="73,7,0,0" VerticalAlignment="Top" Width="48" Source="Images/speech_off.png" Cursor="Hand" ToolTip="" MouseLeftButtonUp="ImgSpeechStatus_MouseLeftButtonUp" Style="{StaticResource ImageHover}"/>
+                    <Image x:Name="ImgHandMouseStatus" HorizontalAlignment="Left" Height="48" Margin="126,7,0,0" VerticalAlignment="Top" Width="48" Source="Images/handmouse_off.png" Cursor="Hand" ToolTip="" MouseLeftButtonUp="ImgHandMouseStatus_MouseLeftButtonUp" Style="{StaticResource ImageHover}"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Sensor Status" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="206" Height="83">
+                <Grid HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="194">
+                    <Image x:Name="ImgSensorStatus" HorizontalAlignment="Left" Height="48" Margin="20,8,0,-10" VerticalAlignment="Top" Width="48" Source="Images/sensor_off.png" ToolTip=""/>
+                    <Label Content="Active" Height="41" HorizontalAlignment="Left" Margin="95,8,0,0" x:Name="LblTilt_Copy" VerticalAlignment="Top" RenderTransformOrigin="-2.692,-3.357" Foreground="#FF54C104" FontSize="22" Width="72" />
+                </Grid>
+            </GroupBox>
+
+        </Grid>
+        <Grid x:Name="GridSensorError" Background="#B2FFFFFF" Visibility="Hidden">
+            <TextBlock HorizontalAlignment="Left" Margin="228,368,0,0" TextWrapping="Wrap" Text="Please Connect Kinect Sensor" VerticalAlignment="Top" Height="74" Width="638" FontSize="48" Foreground="#FFC10C04"/>
+        </Grid>
+    </Grid>
+    
+</Window>
