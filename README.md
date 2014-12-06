@@ -36,12 +36,15 @@ Microsoft .NET Framework 4
 Here you can see the status of the Kinect sensor. Sensor should be active to properly use the application.
 
 ![Sensor Active](/images/sensoractive.png) 
+
 **Sensor Active**
 
 ![Waiting For Sensor](/images/sensorwaiting.png) 
+
 **Waiting For Sensor**
 
 ![Sensor Error](/images/sensorerror.png) 
+
 **Sensor Error**
 
 
@@ -49,12 +52,15 @@ Here you can see the status of the Kinect sensor. Sensor should be active to pro
 Here you can turn recognizers on and off.
 
 ![Gesture Recognition on/off](/images/recog_gesture.png) 
+
 **Gesture Recognition on/off.** This enables/disables recognition of all defined gestures as well as execution of the defined keyboard actions.
 
 ![Voice Recognition on/off](/images/recog_voice.png) 
+
 **Voice Recognition on/off.** With Voice Recognition enabled you can control the application using voice commands.
 
 ![HandMouse Recognition on/off](/images/recog_handmouse.png) 
+
 **HandMouse Recognition on/off.** This enables/disables the HandMouse function, which you can use to control the mouse cursor using hand movements.
 
 
@@ -189,8 +195,8 @@ In order to view this information, the gesture recognition has to be activated.
 
 You can easily control the KineCTRL application using voice commands. First, make sure the Voice Recognition is on. Now you can just say the word or phrase to execute desired action.
 
-Action | Voice Commands
------- | --------------
+Action     | Voice Commands
+---------- | --------------
 Enable Gesture Recognition | start, start recognition, start recognizer, start gesture recognizer, start gesture recognition, activate recognizer, recognizer on, recognition on
 Disable Gesture Recognition | stop, stop recognition, stop recognizer, stop gesture recognizer, stop gesture recognition, deactivate recognizer, recognizer off, recognition off
 Enable HandMouse function | start hand mouse, hand mouse on, activate hand mouse, start mouse, mouse on, activate mouse
@@ -219,3 +225,8 @@ Do Not Multiply Key Presses | stop game, deactivate game, game off
 With the HandMouse function activated, you can control the mouse cursor by moving your hand in the direction the cursor should be shifted. 
 
 Emulate click of the **left mouse button** by saying *click* or *left click*. Emulate click of the **right mouse button** by saying *right click*.
+
+
+## Known Issues
+### DirectX Games
+Some of the DirectX video games won’t react to a single keyboard event. This problem can be solved by checking **Multiply Key Presses** in the **Advanced Settings** tab. The application will now send each event multiple times. However, this is not suitable for interaction with Windows GUI. 
