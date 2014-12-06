@@ -27,7 +27,7 @@ Microsoft .NET Framework 4
 2.	Connect Kinect device to the computer. 
 3.	Start KineCTRL.exe. You should see something like this:
 
-![Main Screen of the application](/images/mainscreen.png)
+![Main Screen of the application](/docs/images/mainscreen.png)
 
 
 ## Main Menu
@@ -35,26 +35,26 @@ Microsoft .NET Framework 4
 ### Sensor Status
 Here you can see the status of the Kinect sensor. Sensor should be active to properly use the application.
 
-![Sensor Active](/images/sensoractive.png) 
+![Sensor Active](/docs/images/sensoractive.png) 
 **Sensor Active**
 
-![Waiting For Sensor](/images/sensorwaiting.png) 
+![Waiting For Sensor](/docs/images/sensorwaiting.png) 
 **Waiting For Sensor**
 
-![Sensor Error](/images/sensorerror.png) 
+![Sensor Error](/docs/images/sensorerror.png) 
 **Sensor Error**
 
 
 ### Recognizers
 Here you can turn recognizers on and off.
 
-![Gesture Recognition on/off](/images/recog_gesture.png) 
+![Gesture Recognition on/off](/docs/images/recog_gesture.png) 
 **Gesture Recognition on/off.** This enables/disables recognition of all defined gestures as well as execution of the defined keyboard actions.
 
-![Voice Recognition on/off](/images/recog_voice.png) 
+![Voice Recognition on/off](/docs/images/recog_voice.png) 
 **Voice Recognition on/off.** With Voice Recognition enabled you can control the application using voice commands.
 
-![HandMouse Recognition on/off](/images/recog_handmouse.png) 
+![HandMouse Recognition on/off](/docs/images/recog_handmouse.png) 
 **HandMouse Recognition on/off.** This enables/disables the HandMouse function, which you can use to control the mouse cursor using hand movements.
 
 
