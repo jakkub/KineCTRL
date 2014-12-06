@@ -34,21 +34,28 @@ Microsoft .NET Framework 4
 
 ### Sensor Status
 Here you can see the status of the Kinect sensor. Sensor should be active to properly use the application.
-![Sensor Active](/images/sensoractive.png) **Sensor Active**
 
-![Waiting For Sensor](/images/sensorwaiting.png) **Waiting For Sensor**
+![Sensor Active](/images/sensoractive.png) 
+**Sensor Active**
 
-![Sensor Error](/images/sensorerror.png) **Sensor Error**
+![Waiting For Sensor](/images/sensorwaiting.png) 
+**Waiting For Sensor**
+
+![Sensor Error](/images/sensorerror.png) 
+**Sensor Error**
 
 
 ### Recognizers
 Here you can turn recognizers on and off.
 
-![Gesture Recognition on/off](/images/recog_gesture.png) **Gesture Recognition on/off.** This enables/disables recognition of all defined gestures as well as execution of the defined keyboard actions.
+![Gesture Recognition on/off](/images/recog_gesture.png) 
+**Gesture Recognition on/off.** This enables/disables recognition of all defined gestures as well as execution of the defined keyboard actions.
 
-![Voice Recognition on/off](/images/recog_voice.png) **Voice Recognition on/off.** With Voice Recognition enabled you can control the application using voice commands.
+![Voice Recognition on/off](/images/recog_voice.png) 
+**Voice Recognition on/off.** With Voice Recognition enabled you can control the application using voice commands.
 
-![HandMouse Recognition on/off](/images/recog_handmouse.png) **HandMouse Recognition on/off.** This enables/disables the HandMouse function, which you can use to control the mouse cursor using hand movements.
+![HandMouse Recognition on/off](/images/recog_handmouse.png) 
+**HandMouse Recognition on/off.** This enables/disables the HandMouse function, which you can use to control the mouse cursor using hand movements.
 
 
 ### HandMouse Mode
@@ -185,47 +192,26 @@ You can easily control the KineCTRL application using voice commands. First, mak
 Action | Voice Commands
 ------ | --------------
 Enable Gesture Recognition | start, start recognition, start recognizer, start gesture recognizer, start gesture recognition, activate recognizer, recognizer on, recognition on
-
 Disable Gesture Recognition | stop, stop recognition, stop recognizer, stop gesture recognizer, stop gesture recognition, deactivate recognizer, recognizer off, recognition off
-
 Enable HandMouse function | start hand mouse, hand mouse on, activate hand mouse, start mouse, mouse on, activate mouse
-
 Disable HandMouse function | stop hand mouse, hand mouse off, deactivate hand mouse, stop mouse, mouse off, deactivate mouse
-
 Switch HandMouse control to Left Hand | left hand mouse, left mouse
-
 Switch HandMouse control to Right Hand | right hand mouse, right mouse
-
 Left Mouse Button Click | click, left click
-
 Right Mouse Button Click | right click
-
 Tilt Sensor Up | tilt up
-
 Tilt Sensor Down | tilt down
-
 Add New Gesture | new gesture, add gesture, add new gesture, add new, create new, create gesture
-
 Redefine Gesture | redefine, redefine gesture, new definition
-
 Show Gesture Recognizer Tab | switch to gesture recognizer, switch to recognizer, show gesture recognizer, show recognizer
-
 Show Gesture Manager Tab | switch to gesture manager, switch to manager, show gesture manager, show manager
-
 Show Body Gestures | switch to body gestures, show body gestures
-
 Show Left Hand Gestures | switch to left hand gestures, show left hand gestures
-
 Show Right Hand Gestures | switch to right hand gestures, show right hand gestures
-
 Show Postures | switch to postures, show postures
-
 Execute Key Presses | start keys, activate keys, keys on
-
 Do Not Execute Key Presses | stop keys, deactivate keys, keys off
-
 Multiply Key Presses | start game, activate game, game on
-
 Do Not Multiply Key Presses | stop game, deactivate game, game off
 
 
