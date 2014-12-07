@@ -5,6 +5,18 @@ A customizable 3D gestural interface for Windows.
 
 [Download current release (v1.0).](https://github.com/jakkub/KineCTRL/releases/tag/v1.0)
 
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Main Menu](#main-menu)
+4. [Gesture Recognizer](#gesture-recognizer)
+5. [Gesture Manager](#gesture-manager)
+6. [Advanced Settings](#advanced-settings)
+7. [Debug Mode](#debug-mode)
+8. [Using Voice Commands](#using-voice-commands)
+9. [Using HandMouse Function](#using-handmouse-function)
+10. [Known Issues](#known-issues)
+
 
 
 ## Introduction
