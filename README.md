@@ -3,6 +3,9 @@ kinectrl
 
 A customizable 3D gestural interface for Windows.
 
+[Download current release (v1.0).](https://github.com/jakkub/KineCTRL/releases/tag/v1.0).
+
+
 
 ## Introduction
 **KineCTRL** is a Windows application that serves as a gestural interface for the desktop environment. Using KineCTRL on your computer, you can **define your own set of full-body 3D gestures**, and use these gestures to **control the operating system** or any other Windows application.
@@ -12,13 +15,13 @@ KineCTRL lets you create four types of gestures: **Body Gestures**, **Left Hand 
 With KineCTRL, you can also control the mouse cursor using **hand movements**.
 
 ### Minimum Hardware Requirements
-**CPU:** Dual-core 2.66 GHz
-**RAM:** 4 GB
-**Kinect for Xbox 360** or **Kinect for Windows** device
+- **CPU:** Dual-core 2.66 GHz
+- **RAM:** 4 GB
+- **Kinect for Xbox 360** or **Kinect for Windows** device
 
 ### Software Requirements
-Windows 7 or Windows 8
-Microsoft .NET Framework 4
+- Windows 7 / Windows 8 / Windows 8.1
+- Microsoft .NET Framework 4
 
 
 
@@ -66,11 +69,11 @@ Here you can adjust the tilt of the Kinect sensor.
 
 ### Profiles
 Here you can manage the user profiles. A profile stores **all of your gestures and settings**. The profile is automatically saved when you close the application, or when another profile is loaded.
-•	You can load a profile by **double clicking on its name**, or by selecting a profile and clicking the **Load** button.
-•	You can copy selected profile by clicking the **Copy** button.
-•	You can delete selected profile by clicking the **Delete** button.
-•	You can create blank profile by clicking the **New** button.
-•	You can rename selected profile by typing a new name into the text field and clicking the **Rename** button.
+- You can load a profile by **double clicking on its name**, or by selecting a profile and clicking the **Load** button.
+- You can copy selected profile by clicking the **Copy** button.
+- You can delete selected profile by clicking the **Delete** button.
+- You can create blank profile by clicking the **New** button.
+- You can rename selected profile by typing a new name into the text field and clicking the **Rename** button.
 
 
 ## Gesture Recognizer
