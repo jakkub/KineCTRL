@@ -1,9 +1,9 @@
-kinectrl
+KineCTRL
 ========
 
 A customizable 3D gestural interface for Windows.
 
-[Download current release (v1.0).](https://github.com/jakkub/KineCTRL/releases/tag/v1.0).
+[Download current release (v1.0).](https://github.com/jakkub/KineCTRL/releases/tag/v1.0)
 
 
 
